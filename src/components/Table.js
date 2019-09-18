@@ -1,12 +1,14 @@
 import React from "react";
 import { compose } from "lodash/fp";
-import withSort from "../hoc/withSort";
+import { withSort, withFilter } from "../hoc/";
 
 const Table = props => {
   const {
     tableData: { columns, rows },
     applySort,
-    sortRows
+    sortRows,
+    applyFilter,
+    filterRows
   } = props;
 
   return (
@@ -24,6 +26,7 @@ const Table = props => {
             <th key={`filter_${title}_${idx}`}>
               <input
                 type="text"
+                onChange={applyFilter(id)}
                 placeholder="Filter"
                 className="Table-filter-input"
               />
@@ -32,7 +35,10 @@ const Table = props => {
         </tr>
       </thead>
       <tbody>
-        {compose(sortRows)(rows).map((row, rowIdx) => (
+        {compose(
+          sortRows,
+          filterRows
+        )(rows).map((row, rowIdx) => (
           <tr key={`${row.number}_${rowIdx}`} className="Table-body-row">
             {columns.map(({ id }, celIdx) => (
               <td key={`${row.number}_${celIdx}`}>{row[id]}</td>
@@ -48,4 +54,7 @@ Table.defaultProps = {
   tableData: { columns: [], rows: [] }
 };
 
-export default compose(withSort)(Table);
+export default compose(
+  withSort,
+  withFilter
+)(Table);
