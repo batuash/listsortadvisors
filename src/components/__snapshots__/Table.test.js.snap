@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table renders correctly with no data 1`] = `
+<table>
+  <thead>
+    <tr />
+    <tr
+      className="Table-filter-row"
+    />
+  </thead>
+  <tbody />
+</table>
+`;
+
+exports[`Table renders correctly with valid data 1`] = `
+<table>
+  <thead>
+    <tr>
+      <th>
+        #
+      </th>
+      <th>
+        First Name
+      </th>
+      <th>
+        Last Name
+      </th>
+      <th>
+        Status
+      </th>
+      <th>
+        Language
+      </th>
+      <th>
+        Reviews
+      </th>
+    </tr>
+    <tr
+      className="Table-filter-row"
+    >
+      <th>
+        <input
+          className="Table-filter-input"
+          placeholder="Filter"
+          type="text"
+        />
+      </th>
+      <th>
+        <input
+          className="Table-filter-input"
+          placeholder="Filter"
+          type="text"
+        />
+      </th>
+      <th>
+        <input
+          className="Table-filter-input"
+          placeholder="Filter"
+          type="text"
+        />
+      </th>
+      <th>
+        <input
+          className="Table-filter-input"
+          placeholder="Filter"
+          type="text"
+        />
+      </th>
+      <th>
+        <input
+          className="Table-filter-input"
+          placeholder="Filter"
+          type="text"
+        />
+      </th>
+      <th>
+        <input
+          className="Table-filter-input"
+          placeholder="Filter"
+          type="text"
+        />
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      className="Table-body-row"
+    >
+      <td>
+        1
+      </td>
+      <td>
+        The
+      </td>
+      <td>
+        Rock
+      </td>
+      <td>
+        online
+      </td>
+      <td>
+        en
+      </td>
+      <td>
+        100
+      </td>
+    </tr>
+    <tr
+      className="Table-body-row"
+    >
+      <td>
+        2
+      </td>
+      <td>
+        Stone
+      </td>
+      <td>
+        Cold
+      </td>
+      <td>
+        online
+      </td>
+      <td>
+        en
+      </td>
+      <td>
+        143
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

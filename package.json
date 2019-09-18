@@ -1,0 +1,52 @@
+{
+  "name": "list-sort-advisors",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "homepage": "http://batuash.github.io/listsortadvisors",
+  "scripts": {
+    "test": "jest",
+    "prestart": "grunt css",
+    "start": "NODE_ENV=development webpack-dev-server --mode development",
+    "prebuild": "grunt css",
+    "build": "NODE_ENV=development webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "flow": "flow"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^1.0.1",
+    "flow-bin": "^0.97.0",
+    "gh-pages": "^1.2.0",
+    "grunt": "^1.0.4",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^1.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.8.0",
+    "load-grunt-tasks": "^4.0.0",
+    "react-test-renderer": "^16.8.6",
+    "redux-logger": "^3.0.6",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  }
+}

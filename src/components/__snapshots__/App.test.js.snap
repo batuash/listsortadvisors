@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <Table
+    tableData={
+      Object {
+        "columns": Array [
+          Object {
+            "id": "number",
+            "title": "Number",
+          },
+          Object {
+            "id": "fname",
+            "title": "First Name",
+          },
+          Object {
+            "id": "lname",
+            "title": "Last Name",
+          },
+          Object {
+            "id": "status",
+            "title": "Status",
+          },
+          Object {
+            "id": "language",
+            "title": "Language",
+          },
+          Object {
+            "id": "reviews",
+            "title": "Reviews",
+          },
+        ],
+        "rows": Array [
+          Object {
+            "fname": "The",
+            "language": "en",
+            "lname": "Rock",
+            "number": 1,
+            "reviews": 100,
+            "status": "online",
+          },
+          Object {
+            "fname": "Stone",
+            "language": "en",
+            "lname": "Cold",
+            "number": 2,
+            "reviews": 143,
+            "status": "online",
+          },
+        ],
+      }
+    }
+  />
+</div>
+`;
