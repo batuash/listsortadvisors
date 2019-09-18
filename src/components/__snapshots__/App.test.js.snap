@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div>
-  <Table
+  <_temp
     tableData={
       Object {
         "columns": Array [
@@ -46,6 +46,14 @@ exports[`renders correctly 1`] = `
             "lname": "Cold",
             "number": 2,
             "reviews": 143,
+            "status": "online",
+          },
+          Object {
+            "fname": "The",
+            "language": "en",
+            "lname": "Undertaker",
+            "number": 3,
+            "reviews": 67,
             "status": "online",
           },
         ],
