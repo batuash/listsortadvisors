@@ -1,22 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Table renders correctly with no data 1`] = `
-<Table
+<_temp
   applySort={[Function]}
   desc={false}
   orderBy="number"
   sortRows={[Function]}
-  tableData={
-    Object {
-      "columns": Array [],
-      "rows": Array [],
-    }
-  }
 />
 `;
 
 exports[`Table renders correctly with valid data 1`] = `
-<Table
+<_temp
   applySort={[Function]}
   desc={false}
   orderBy="number"
@@ -52,7 +46,7 @@ exports[`Table renders correctly with valid data 1`] = `
       "rows": Array [
         Object {
           "fname": "The",
-          "language": "en",
+          "language": "es",
           "lname": "Rock",
           "number": 1,
           "reviews": 100,
@@ -68,11 +62,11 @@ exports[`Table renders correctly with valid data 1`] = `
         },
         Object {
           "fname": "The",
-          "language": "en",
+          "language": "de",
           "lname": "Undertaker",
           "number": 3,
           "reviews": 67,
-          "status": "online",
+          "status": "offline",
         },
       ],
     }

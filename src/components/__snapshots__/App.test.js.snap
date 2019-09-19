@@ -34,7 +34,7 @@ exports[`renders correctly 1`] = `
         "rows": Array [
           Object {
             "fname": "The",
-            "language": "en",
+            "language": "es",
             "lname": "Rock",
             "number": 1,
             "reviews": 100,
@@ -50,11 +50,11 @@ exports[`renders correctly 1`] = `
           },
           Object {
             "fname": "The",
-            "language": "en",
+            "language": "de",
             "lname": "Undertaker",
             "number": 3,
             "reviews": 67,
-            "status": "online",
+            "status": "offline",
           },
         ],
       }

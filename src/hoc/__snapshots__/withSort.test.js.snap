@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withSort should render an enhanced component 1`] = `
+<MyComponent
+  applySort={[Function]}
+  desc={false}
+  orderBy="number"
+  sortRows={[Function]}
+/>
+`;

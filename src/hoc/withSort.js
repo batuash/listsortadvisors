@@ -24,7 +24,7 @@ function withSort(WrappedComponent) {
       b: b[this.state.orderBy]
     });
 
-    isEmpty = input => typeof input === "undefined" || typeof input === "null";
+    isEmpty = input => typeof input === "undefined" || input === null;
 
     compareValues = ({ a, b }) =>
       this.isEmpty(a) || a < b ? -1 : a > b ? 1 : 0;
