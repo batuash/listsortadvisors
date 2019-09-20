@@ -25,7 +25,7 @@ describe("withSort", () => {
   });
 
   it("should initalize component state", () => {
-    const wrapper = shallow(<EnhancedComponent />);
+    wrapper = shallow(<EnhancedComponent />);
     expect(wrapper.state("orderBy")).toBe("number");
     expect(wrapper.state("desc")).toBe(false);
   });
@@ -39,7 +39,7 @@ describe("withSort", () => {
       expect(wrapper.state("desc")).toBe(true);
     });
 
-    it("should set the value of orderBy ", () => {
+    it("should set the value of orderBy", () => {
       expect(wrapper.state("orderBy")).toBe("number");
       instance.applySort("fname")();
       expect(wrapper.state("orderBy")).toBe("fname");

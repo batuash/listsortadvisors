@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withFilter should render an enhanced component 1`] = `
+<MyComponent
+  applyFilter={[Function]}
+  filterRows={[Function]}
+  filters={Array []}
+/>
+`;
