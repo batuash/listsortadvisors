@@ -1,28 +1,30 @@
 import React from "react";
 import { compose } from "lodash/fp";
-import { withSort, withFilter } from "../hoc/";
+import { withSort, withFilter, withInfiniteScroll } from "../hoc/";
+
+const TABLE_COLUMNS = [
+  { id: "fname", title: "First Name" },
+  { id: "lname", title: "Last Name" },
+  { id: "status", title: "Status" },
+  { id: "language", title: "Language" },
+  { id: "reviews", title: "Reviews" }
+];
 
 const Table = props => {
-  const {
-    tableData: { columns, rows },
-    applySort,
-    sortRows,
-    applyFilter,
-    filterRows
-  } = props;
+  const { applySort, sortRows, applyFilter, filterRows, advisors } = props;
 
   return (
     <table>
       <thead>
         <tr>
-          {columns.map(({ id, title }, idx) => (
+          {TABLE_COLUMNS.map(({ id, title }, idx) => (
             <th key={`${title}_${idx}`} onClick={applySort(id)}>
               {id === "number" ? "#" : title}
             </th>
           ))}
         </tr>
         <tr className="Table-filter-row">
-          {columns.map(({ id, title }, idx) => (
+          {TABLE_COLUMNS.map(({ id, title }, idx) => (
             <th key={`filter_${title}_${idx}`}>
               <input
                 type="text"
@@ -38,9 +40,9 @@ const Table = props => {
         {compose(
           sortRows,
           filterRows
-        )(rows).map((row, rowIdx) => (
+        )(advisors).map((row, rowIdx) => (
           <tr key={`${row.number}_${rowIdx}`} className="Table-body-row">
-            {columns.map(({ id }, celIdx) => (
+            {TABLE_COLUMNS.map(({ id }, celIdx) => (
               <td key={`${row.number}_${celIdx}`}>{row[id]}</td>
             ))}
           </tr>
@@ -51,10 +53,11 @@ const Table = props => {
 };
 
 Table.defaultProps = {
-  tableData: { columns: [], rows: [] }
+  advisors: []
 };
 
 export default compose(
+  withInfiniteScroll,
   withSort,
   withFilter
 )(Table);

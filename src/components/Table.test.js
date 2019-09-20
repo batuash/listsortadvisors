@@ -1,7 +1,6 @@
 import React from "react";
 import { Table } from "./";
 import ShallowRenderer from "react-test-renderer/shallow";
-import tableData from "../static/sampleData";
 
 describe("Table", () => {
   it("renders correctly with no data", () => {
@@ -12,7 +11,19 @@ describe("Table", () => {
 
   it("renders correctly with valid data", () => {
     const renderer = new ShallowRenderer();
-    const tree = renderer.render(<Table tableData={tableData} />);
+    const tree = renderer.render(
+      <Table
+        advisors={[
+          {
+            fname: "John",
+            lname: "Doe",
+            status: "online",
+            language: "es",
+            reviews: 100
+          }
+        ]}
+      />
+    );
     expect(tree).toMatchSnapshot();
   });
 });

@@ -1,75 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Table renders correctly with no data 1`] = `
-<_temp
-  applySort={[Function]}
-  desc={false}
-  orderBy="number"
-  sortRows={[Function]}
-/>
+<InfiniteScroll
+  element="div"
+  getScrollParent={null}
+  hasMore={true}
+  initialLoad={true}
+  isReverse={false}
+  loadMore={[Function]}
+  loader={
+    <div
+      className="loader"
+    >
+      Loading ...
+    </div>
+  }
+  pageStart={0}
+  ref={null}
+  threshold={0}
+  useCapture={false}
+  useWindow={true}
+>
+  <_temp
+    advisors={Array []}
+  />
+</InfiniteScroll>
 `;
 
 exports[`Table renders correctly with valid data 1`] = `
-<_temp
-  applySort={[Function]}
-  desc={false}
-  orderBy="number"
-  sortRows={[Function]}
-  tableData={
-    Object {
-      "columns": Array [
+<InfiniteScroll
+  element="div"
+  getScrollParent={null}
+  hasMore={true}
+  initialLoad={true}
+  isReverse={false}
+  loadMore={[Function]}
+  loader={
+    <div
+      className="loader"
+    >
+      Loading ...
+    </div>
+  }
+  pageStart={0}
+  ref={null}
+  threshold={0}
+  useCapture={false}
+  useWindow={true}
+>
+  <_temp
+    advisors={
+      Array [
         Object {
-          "id": "number",
-          "title": "Number",
-        },
-        Object {
-          "id": "fname",
-          "title": "First Name",
-        },
-        Object {
-          "id": "lname",
-          "title": "Last Name",
-        },
-        Object {
-          "id": "status",
-          "title": "Status",
-        },
-        Object {
-          "id": "language",
-          "title": "Language",
-        },
-        Object {
-          "id": "reviews",
-          "title": "Reviews",
-        },
-      ],
-      "rows": Array [
-        Object {
-          "fname": "The",
+          "fname": "John",
           "language": "es",
-          "lname": "Rock",
-          "number": 1,
+          "lname": "Doe",
           "reviews": 100,
           "status": "online",
         },
-        Object {
-          "fname": "Stone",
-          "language": "en",
-          "lname": "Cold",
-          "number": 2,
-          "reviews": 143,
-          "status": "online",
-        },
-        Object {
-          "fname": "The",
-          "language": "de",
-          "lname": "Undertaker",
-          "number": 3,
-          "reviews": 67,
-          "status": "offline",
-        },
-      ],
+      ]
     }
-  }
-/>
+  />
+</InfiniteScroll>
 `;

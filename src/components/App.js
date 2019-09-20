@@ -1,10 +1,9 @@
 import React from "react";
 import { Table } from "./";
-import tableData from "../static/sampleData";
 
 const App = () => (
   <div>
-    <Table tableData={tableData} />
+    <Table />
   </div>
 );
 
