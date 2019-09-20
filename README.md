@@ -1,4 +1,4 @@
-List and sort Advisors
+List and sort advisors
 ===========================
 
 > An apllication to display, sort and filter values in a list
@@ -14,7 +14,7 @@ Running Locally
 ---------------
 
 ``` bash
-# serve with hot reload at localhost:3000
+# serve with hot reload at localhost:8080
 npm run start
 ```
 
