@@ -26,4 +26,4 @@ Test
 npm run test
 ```
 
-[Live demo](https://batuash.github.io/listsortadvisors/)
+[Live demo](https://batuash.github.io/listsortadvisors/index.html)
