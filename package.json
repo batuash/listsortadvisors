@@ -6,9 +6,9 @@
   "homepage": "http://batuash.github.io/listsortadvisors",
   "scripts": {
     "test": "jest",
-    "prestart": "grunt css",
+    "prestart": "grunt sass",
     "start": "NODE_ENV=development webpack-dev-server --mode development",
-    "prebuild": "grunt css",
+    "prebuild": "grunt sass",
     "build": "NODE_ENV=development webpack --mode production",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
